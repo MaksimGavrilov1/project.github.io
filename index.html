@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+    <div class="body">
+      <div id="fullscreen">
+        <p id="fullscreen_date"></p>
+      </div>
+      <div class="header_style">
+        
+        <div>
+          <p id="name">Hello,</p>
+        </div>
+        <div class="header__menu">
+          <button class="menu__button">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </button>
+          <div class="menu__variants">
+            <a onclick="showFon()">Включить заставку</a>
+            <a onclick="changeUsername()">Сменить имя</a>
+          </div>
+        </div>
+      </div>
+
+      <main >
+        <div class="entry">
+          <div class="js_descript">
+            <h2>JavaScript</h2>
+            <p>
+              JavaScript - предназначен для написания сценариев<br />
+              для активных HTML-страниц. С помощью JavaScript можно<br />
+              динамически изменять текст загружаемого HTML-документа<br />
+              и реагировать на события, связанные с действиями посетителя<br />
+              или изменениями состоятия документа или окна.<br />
+              JavaScript не предназначен для создания автономных<br />
+              приложений. Программа на JavaScript встраивается
+              непосредственно<br />
+              в исходный текст HTML-документа и интерпретируется<br />
+              брaузером по мере загрузки этого документа.
+            </p>
+          </div>
+          <div class="js_logo">
+            <img src="javascript.png" alt="error" />
+          </div>
+        </div>
+
+        <div class="block_triangle">
+          <div class="block_triangle_img">
+            <img src="triangle.jpg" alt="triangle" />
+          </div>
+          <div class="block_triangle_result">
+            <h3>Площадь треугольника</h3>
+            <form>
+              <p>
+                Введите сторону: <input type="number" size="10" id="tri_side"  />
+              </p>
+              <p>
+                Введите высоту: <input type="number" size="10" id="tri_height" />
+              </p>
+            </form>
+            <p>
+              <button
+                id="tri_square"
+                style="font-family: avenir; font-size: 18px"
+              >
+                Посчитать
+              </button>
+            </p>
+
+            <p id="tri_answer"><br />Ответ:</p>
+          </div>
+          <div class="block_triangle_help">
+            <button id="tri_help_button" onclick="location.hash ='zatemnenie'">Помощь</button>
+          </div>
+        </div>
+
+        <div class="block_strings">
+          <div class="block_strings_result">
+            <h3>Сравниваем 2 строки</h3>
+            <form>
+              <p><input type="text" size="40" id="first_string" /></p>
+              <p><input type="text" size="40" id="second_string" /></p>
+              <p>
+                <input
+                  style="font-family: avenir; font-size: 14px"
+                  type="button"
+                  id="str_button"
+                  value="Сравнить"
+                />
+              </p>
+            </form>
+            <p class="strings_answer"><br />Ответ:</p>
+          </div>
+          <div class="block_strings_img">
+            <img src="strings.png" alt="strings" />
+          </div>
+          <div class="block_strings_help">
+            <div class="block_triangle_help">
+              <button id="str_help_button" onclick="location.hash ='zatemnenie'">Помощь</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="block_arr">
+          <div class="block_arr_img">
+            <img src="min_max.jpg" alt="strings" />
+          </div>
+          <div class="block_arr_result">
+            <h3>Ищем максимальное и минимальное</h3>
+            <p>Введите 5 чисел через запятую</p>
+            <form>
+              <p><input type="number" min="-9999" max="9999"class="numbers" />
+              <input type="number" min="-9999" max="9999" class="numbers" />
+              <input type="number" min="-9999" max="9999" class="numbers" />
+              <input type="number" min="-9999" max="9999" class="numbers" />
+              <input type="number" min="-9999" max="9999" class="numbers" /></p>
+              <p>
+                <input
+                  style="font-family: avenir; font-size: 14px"
+                  type="button"
+                  id="arr_button"
+                  value="Найти"
+                />
+              </p>
+            </form>
+            <p class="arr_answer"><br />Ответ:</p>
+          </div>
+
+          <div class="block_arr_help">
+            <div class="block_triangle_help">
+              <button id="arr_help_button" onclick="location.hash ='zatemnenie'">Помощь</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="block_timer">
+          <div class="block_timer_result">
+            <h3>Таймер</h3>
+            <p>
+              <span
+                id="my_timer"
+                style="
+                  color: rgb(255, 215, 0);
+                  font-size: 150%;
+                  font-weight: bold;
+                "
+                >01:00:00</span
+              >
+            </p>
+            <button id="play" onclick="TIme.begin = 1">Старт</button>
+            <button id="stop" onclick="TIme.stop = 1">Стоп</button>
+            <button id="again" onclick="againTime()">С начала</button>
+            <button id="check_time" onclick="checkTime()">
+              Времени прошло
+            </button>
+
+            <p id="sec_passed"></p>
+
+            <div class="block_arr_help">
+              <div class="block_triangle_help">
+                <button id="timer_help_button" onclick="location.hash ='zatemnenie'">Помощь</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block_quiz">
+          <div class="block_quiz_main">
+            <h3>Тест на знание JS</h3>
+          </div>
+          <br />
+          <form id="block_quiz_test">
+            <legend>1. JavaScript - это ___ язык</legend>
+            <label for="">
+              <input type="radio" name="q1" value="true" />
+              Мультипарадигменный<span class="q1"></span>
+            </label>
+            <br />
+            <label for="">
+              <input type="radio" name="q1" value="false" />
+              Объектно-ориентированный<span class="q1"></span>
+            </label>
+            <br />
+            <label for="">
+              <input type="radio" name="q1" value="false" />
+              Функциональный<span class="q1"></span>
+            </label>
+            <br />
+            <label for="">
+              <input type="radio" name="q1" value="false" />
+              Процедурный<span class="q1"></span>
+            </label>
+            <br />
+
+            <legend>2. Создатель языка JavaScript</legend>
+            <label for="">
+              <input type="radio" name="q2" value="false" />
+              Дональд Кнут<span class="q2"></span>
+              
+            </label>
+            <br />
+            <label for="">
+              <input type="radio" name="q2" value="false" />
+              Линус Торвальд<span class="q2"></span>
+            </label>
+            <br />
+            <label for="">
+              <input type="radio" name="q2" value="true" />
+              Брендан Эйх<span class="q2"></span>
+            </label>
+            <br />
+            <label for="">
+              <input type="radio" name="q2" value="false" />
+              Джеймс Гослинг<span class="q2"></span>
+            </label>
+            <br />
+
+            <legend>3. JavaScript имеет тип исполнения</legend>
+            <label for="">
+              <input type="radio" name="q3" value="true" />
+              Интерпретация<span class="q3"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q3" value="false" />
+              Компиляция<span class="q3"></span><br />
+              <input type="radio" name="q3" value="false" />
+              Декомпиляция<span class="q3"></span><br />
+              <input type="radio" name="q3" value="false" />
+              Дезинтеграция<span class="q3"></span><br />
+            </label>
+
+            <legend>4. JavaScript появился в ___</legend>
+            <label for="">
+              <input type="radio" name="q4" value="true" />
+              1995<span class="q4"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q4" value="false" />
+              2000<span class="q4"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q4" value="false" />
+              1997<span class="q4"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q4" value="false" />
+              1991<span class="q4"></span>
+            </label><br />
+
+            <legend>5. Файлы, созданные с помощью JS имеет расширение</legend>
+            <label for="">
+              <input type="radio" name="q5" value="false" />
+              .html<span class="q5"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q5" value="false" />
+              .css<span class="q5"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q5" value="true" />
+              .js<span class="q5"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q5" value="false" />
+              .c<span class="q5"></span>
+            </label><br />
+
+            <legend>6. JS необходим для</legend>
+            <label for="">
+              <input type="radio" name="q6" value="false" />
+              Стилизации веб-страницы<span class="q6"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q6" value="false" />
+              Создания кнопок и элементов управления<span class="q6"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q6" value="true" />
+              Взаимодействия с html-элементами и управления их содержимым<span class="q6"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q6" value="false" />
+              Создания игр<span class="q6"></span>
+            </label><br />
+
+            <legend>7. Укажите библиотеку для JS</legend>
+            <label for="">
+              <input type="radio" name="q7" value="true" />
+              Angular<span class="q7"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q7" value="false" />
+              Ribbex<span class="q7"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q7" value="false" />
+              Fortran<span class="q7"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q7" value="false" />
+              Spring<span class="q7"></span>
+            </label><br />
+
+            <legend>
+              8. Укажите функцию, которая показывает сообщение пользователю и
+              ждет, пока он нажмет кнопку ОК
+            </legend>
+            <label for="">
+              <input type="radio" name="q8" value="false" />
+              prompt<span class="q8"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q8" value="true" />
+              alert<span class="q8"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q8" value="false" />
+              compare<span class="q8"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q8" value="false" />
+              confirm<span class="q8"></span>
+            </label><br />
+
+            <legend>
+              9. Укажите функцию, которая показывает какое-либо сообщение и
+              имеет поля для ввода
+            </legend>
+            <label for="">
+              <input type="radio" name="q9" value="true" />
+              prompt<span class="q9"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q9" value="false" />
+              alert<span class="q9"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q9" value="false" />
+              compare<span class="q9"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q9" value="false" />
+              confirm<span class="q9"></span>
+            </label><br />
+
+            <legend>
+              10. Что возвращает функция prompt при нажатие пользователем
+              клавиши Esc
+            </legend>
+            <label for="">
+              <input type="radio" name="q10" value="false" />
+              true<span class="q10"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q10" value="false" />
+              false<span class="q10"></span>
+            </label><br />
+            <label for="">
+              <input type="radio" name="q10" value="true" />
+              null<span class="q10"></span><br />
+              <input type="radio" name="q10" value="false" />
+              NaN<span class="q10"></span><br />
+            </label>
+
+            <br />
+            <button class="block_quiz_button" type="button">Проверить</button>
+            <button class="block_quiz_refresh" type="button" onclick="refresh()">Начать снова</button>
+            <div class="block_quiz_answer">
+              <p id="quiz_answer"></p>
+            </div>
+            <div class="block_triangle_help">
+              <button id="test_help_button" onclick="location.hash ='zatemnenie'">Помощь</button>
+            </div>
+          </form>
+        </div>
+        <div id="zatemnenie">
+          <window>
+              <a href="#close_window" class="close_window" onclick="clear()">X</a>
+              
+              <div id="text_help">
+              </div>
+              
+          </window>
+       </div>
+      </main>
+      <script src="script.js"></script>
+      <script src="timer.js"></script>
+      <script src="test.js"></script>
+      <script src="fon_JS.js"></script>
+      <script src="modal_window.js"></script>
+    </div>
+  </body>
+</html>
